@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
     <style>
+       
+
         .b_prop {
             border: 10px solid rgb(219, 40, 4);
         }
@@ -39,6 +41,7 @@
 
         .t_transfrom_capitalize {
             text-transform: capitalize;
+            color: black;
         }
 
         .line_height {
@@ -55,17 +58,21 @@
 
         body {
             background-color: black;
-            background-image: url(images/background.jpg);
+            background-image: url(Images/background.jpg);
             background-repeat: no-repeat;
             background-size: cover;
-            background-position: center;
+            background-position: cover;
+            position: relative;
+
 
         }
-        img{
+
+        img {
             filter: drop-shadow(5px 5px 10px red);
-            
+
         }
-          h2 {
+
+        h2 {
             color: hsl(0, 79%, 43%);
             font-size: 50px;
 
@@ -77,51 +84,122 @@
             text-shadow: 4px 6px 8px;
             background-color: rgb(245, 243, 247);
         }
-       
-      .t_shadow2{
+
+        .t_shadow2 {
             color: red;
             text-shadow: 5px 5px 10px rgb(15, 15, 15);
-      }
-      
+        }
+
         .f_family2 {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
         }
-         
+
+        .images_slider {
+            height: 500px;
+            width: 800px;
+            background-color: black;
+            background-image: url(images/food1.png);
+            background-size: 100% 100%;
+            top: 160%;
+            left: 20%;
+            position: relative;
+            border: 2px solid white;
+            border-radius: 20px;
+            box-shadow: 2px 5px 15px 5px red;
+            animation: slider 5s infinite linear;
+        }
+
+        @keyframes slider {
+            0% {
+                background-image: url(images/food1.png);
+            }
+
+            25% {
+                background-image: url(images/food2.png);
+            }
+
+            50% {
+                background-image: url(images/food3.png);
+            }
+
+            75% {
+                background-image: url(images/burger.webp);
+            }
+             100% {
+                background-image: url(images/coffie.png);
+            }
+
+        }
+         .text_container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+            letter-spacing: 4px;
+            font-size: 60px;
+            font-weight: 800;
+            perspective: 60px;
+        }
+
+        .text_container >b {
+            height: 70px;
+            box-shadow: 0px 6px 2px grey;
+            background: linear-gradient(to right, red,blue);
+            background-clip: text;
+            color: transparent;
+            transform-origin:left ;
+            /* transform: rotate(-85deg); */
+            animation: getup 10s infinite;
+
+        }
+        .text_container>b:nth-child(1){animation-delay: 0s;}
+        .text_container>b:nth-child(2){animation-delay: 0.25s;}
+        .text_container>b:nth-child(3){animation-delay: 0.50s;}
+        .text_container>b:nth-child(4){animation-delay: 0.75s;}
+        .text_container>b:nth-child(5){animation-delay: 1s;}
+         .text_container>b:nth-child(6){animation-delay: 1.25s;}
+         .text_container>b:nth-child(7){animation-delay: 1.50s;}
+         .text_container>b:nth-child(8){animation-delay: 1.75s;}
+         .text_container>b:nth-child(9){animation-delay: 2s;}
+         .text_container>b:nth-child(10){animation-delay: 2.25s;}
+         .text_container>b:nth-child(11){animation-delay: 2.50s;}
+        @keyframes getup{
+            from{transform: rotateX(-85deg)}
+            10%,50%{transform:rotateX(0deg) ;}
+             60%,to{transform:rotateX(-85deg) ;}
+        }
+       
         
         
-        
+
     </style>
 </head>
 
 <body>
 
+     <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="product.html">Product</a>
+            <a href="contact.html">Contact</a>
+            <a href="social.html">Social</a>
+             
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="product.html">Product</a>
-        <a href="contact.html">Contanct</a>
-        <a href="social.html">Social</a>
-       
-        <marquee  direction="right">
-            <h1  class="f_family2" ><strong>#___Cafe Info___#</strong></h1>
-
-        </marquee>
-
-        
-
+           
+        </nav>
+        <div class="text_container">
+            <b>C</b><b>A</b><b>F</b><b>E</b><b>S</b><b>I</b><b>Z</b><b>Z</b><b>L</b><b>A</b><b>R</b>
+        </div>
 
 
-    </nav>
-    <img src="images/welcome_PNG32.png" alt="welcome" class="d_shadow " width="1200" height="350"   />
-    <h2 class="t_center t_shadow" class="h_effect">Cafe Sizzlar</h2>
-    
+    <!-- <h2 class="t_center t_shadow" class="h_effect">Cafe Sizzlar</h2> -->
 
 
 
 
-    <p class="line_height t_transfrom_capitalize t_decor_under">The history of Cafe sizzleras a specific restaurant is
+
+    <p class="line_height t_transfrom_capitalize t_decor_under " class="color">The history of Cafe sizzleras a specific restaurant is
         not well-documented, but the
         "sizzler" dish originated in <mark>1963 </mark> Mumbai when Firoz Erani, inspired by Japanese teppanyaki in
         California, opened his restaurant called <mark>'The Sizzler'</mark>. His son, Shahrookh Erani, carried on the
@@ -139,15 +217,14 @@
         The enduring establishment: "The Place: Touche" in Pune remains a popular and long-standing sizzler restaurant,
         with some sources crediting it as the original sizzler restaurant in India.
         The wider phenomenon: The popularity of the sizzler grew over time, inspiring other restaurants and becoming a
-        beloved dish across India... </p>
-    <img src="img/cup2" width="400" height="400" alt="cup" class="d_shadow img_ratio" />
-    <img src="img/p" width="400" height="400" alt="cup" class="b_prop" />
+        beloved dish across India... </p><br>
 
 
-    <img src="img/pexels-wojtekpaczes-17516411 (1).jpg" width="400" height="400" alt="cup"  class="d_shadow img_ratio"/>
-    
     <hr>
-    <p align="Centre"><mark>&copy;2025 cafe sizzler |All right reserved</mark></p>
+    <div class="images_slider"></div>
+
+    <!-- <hr>
+    <p align="Centre"><mark>&copy;2025 cafe sizzler |All right reserved</mark></p> -->
 
 </body>
 
